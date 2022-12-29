@@ -1,0 +1,14 @@
+<!-- Partial for rendering the metadata of the content -->
+
+{{ $dateTime := .PublishDate.Format "2006-01-02" }}
+{{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
+<span class="bold italic">Publicado a: </span>
+<time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time>
+<br />
+<span class="bold italic">Etiquetas: </span>
+{{ with .Params.tags }}
+	{{ range . }}
+		{{ $href := print (absURL "tags/") (urlize .) }}
+		<a href="{{ $href }}">{{ . }}</a>
+	{{ end }}
+{{ end }}

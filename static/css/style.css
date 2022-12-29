@@ -1,0 +1,18 @@
+@font-face {
+	font-family: Rubik;
+	src: url(../ttf/rubik/Rubik-Regular.ttf);
+}
+
+body {
+	font-family: 'Rubik';
+	background-color: black;
+	color: pink;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.bold {
+	font-weight: bold;
+}

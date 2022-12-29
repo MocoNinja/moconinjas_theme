@@ -1,0 +1,15 @@
+<!-- Partial for rendering the head (meta information about the document) -->
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	{{- partial "favicon.html" . -}}
+	{{- partial "styles.html" . -}}
+	{{ $title := "" }}
+	{{ if .IsHome }}
+		{{ $title = .Site.Title }}
+	{{ else }}
+		{{ $title = print .Site.Title " | " .Title }}
+	{{ end }}
+	<title>{{ $title }}</title>
+</head>
