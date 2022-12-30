@@ -3,10 +3,18 @@
 	src: url(../ttf/rubik/Rubik-Regular.ttf);
 }
 
+@font-face {
+	font-family: Jetbrains Mono;
+	src: url(../ttf/jetbrains_mono/JetBrainsMono-Regular.ttf);
+}
+
 body {
-	font-family: 'Rubik';
+	font-family: 'Rubik', sans-serif;
 	background-color: black;
-	color: pink;
+	color: #373370;
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
 }
 
 .italic {
@@ -16,3 +24,62 @@ body {
 .bold {
 	font-weight: bold;
 }
+
+header,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: #455073;
+}
+
+code,
+.highlight {
+	border: 1px solid blueviolet;
+	background-color: #333;
+	color: greenyellow;
+	font-family: 'Jetbrains Mono', monospace;
+}
+
+nav {
+	width: 100vw;
+	height: 3rem;
+	background-color: #373370;
+}
+
+nav > ul {
+	width: 100%;
+	display: inline-flex;
+	align-items: center;
+}
+
+nav > ul > li {
+	margin:0.25rem 2rem;
+	color: crimson;
+	list-style: none;
+}
+
+nav > ul > li :hover {
+	color: brown;
+}
+
+nav > ul > li > a {
+	text-decoration: none;
+	cursor: pointer;
+	color: inherit;
+}
+
+body::after {
+	content: '';
+	display: block;
+	height: 2.5rem; /* Set same as footer's height */
+  }
+  
+  footer {
+	width: 100%;
+	height: 2.5rem;
+	text-align: center;
+	color: #fe0fe0;
+  }

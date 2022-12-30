@@ -4,7 +4,9 @@
 
 	<body>
 		{{- partialCached "navbar.html" . -}}
-		{{- block "renderContent" . }}{{- end }}
+		<main>
+			{{- block "renderContent" . }}{{- end }}
+	</main>
 		{{- partialCached "footer.html" . -}}
 		{{- partialCached "scripts.html" . -}}
 	</body>
